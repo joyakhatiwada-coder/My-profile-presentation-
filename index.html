@@ -7,6 +7,64 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Profile Image with Green Border */
+        .profile-img {
+            border: 4px solid #10b981;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Technical Skills Card Styling (Single, Clean, White Bold Headings & Spacing) */
+        .card img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            margin-bottom: 12px;
+            border-radius: 8px;
+        }
+
+        .card h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        /* Balanced, soft green background for Top 3 Goals cards & White Headings */
+        .goals-container .card {
+            background-color: #e6f4ea;
+            border: 1px solid #ceead6;
+        }
+
+        .goals-container .card h3 {
+            color: #ffffff;
+        }
+
+        /* Adjust Homeland card width and padding */
+        .homeland-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .homeland-card {
+            max-width: 750px;
+            width: 100%;
+        }
+
+        /* Footer Bold White Designer Signature Styling */
+        .footer-signature {
+            margin-bottom: 10px;
+            font-size: 1rem;
+            color: #ffffff;
+            font-weight: 700;
+        }
+    </style>
 </head>
 
 <body>
@@ -28,7 +86,7 @@
 
         <p class="welcome">WELCOME TO MY PORTFOLIO</p>
 
-        <h1>Hi, I'm <span>Jaya Laxmi Dotel</span> 👋</h1>
+        <h1>Hi, I'm <span>Jaya Laxmi Dotel</span> 🌸</h1>
 
         <p class="subtitle">
             Computer Engineering Student at Seoul Theological University
@@ -51,24 +109,23 @@
         </div>
 
         <div class="container">
-            <div class="card">
-                <div class="icon">🌐</div>
+            <div class="card" style="background-color: #111827; color: #d1d5db;">
+                <img src="web-icon.jpg" alt="Web Development">
                 <h3>Web Development</h3>
                 <p>HTML5, CSS3, Flexbox, Grid Layouts, and responsive web design.</p>
             </div>
 
-            <div class="card">
-                <div class="icon">💻</div>
+            <div class="card" style="background-color: #111827; color: #d1d5db;">
+                <img src="python-icon.jpg" alt="Python Programming">
                 <h3>Python Programming</h3>
                 <p>Data structures, Spyder IDE, logical thinking, and problem-solving.</p>
             </div>
 
-            <div class="card">
-                <div class="icon">🛠️</div>
+            <div class="card" style="background-color: #111827; color: #d1d5db;">
+                <img src="tools-icon.jpg" alt="Development Tools">
                 <h3>Development Tools</h3>
                 <p>VS Code, Git, and interactive tools for programming projects.</p>
             </div>
-
         </div>
     </section>
 
@@ -81,7 +138,7 @@
         </div>
 
         <div class="container goals-container">
-            <div class="card">
+            <div class="card" style="background-color: #111827; color: #d1d5db;">
                 <div class="icon">💻</div>
                 <h3>Master Front-End Development</h3>
                 <p>
@@ -90,7 +147,7 @@
                 </p>
             </div>
 
-            <div class="card">
+            <div class="card" style="background-color: #111827; color: #d1d5db;">
                 <div class="icon">🚀</div>
                 <h3>Excel in Computer Engineering</h3>
                 <p>
@@ -99,7 +156,7 @@
                 </p>
             </div>
 
-            <div class="card">
+            <div class="card" style="background-color: #111827; color: #d1d5db;">
                 <div class="icon">🌏</div>
                 <h3>Grow as a Global Tech Professional</h3>
                 <p>
@@ -120,18 +177,13 @@
 
         <div class="container homeland-container">
             <div class="card homeland-card">
-                <div class="icon">🇳🇵</div>
-                <h3>Proudly from Nepal</h3>
-                <p>
-                    I come from Nepal, a beautiful country nestled in the
-                    Himalayas. Nepal is famous for Mount Everest, majestic
-                    mountains, rich cultural heritage, warm hospitality,
-                    and stunning natural landscapes.
-
-                    Moving from Nepal to Korea for my studies has been
-                    an exciting journey. It allows me to experience a
-                    new culture, develop my technical knowledge, and
-                    work toward my future goals.
+                <h3 style="color: white; font-size: 1.35rem; font-weight: 700; margin-bottom: 10px;">Proudly from Nepal</h3>
+                <p style="margin: 0;">
+                    I come from Nepal, a country nestled in the majestic Himalayas and famously known as the birthplace of Lord Buddha and home to Mount Everest. Nepal is a land of incredible natural beauty, peaceful landscapes, and breathtaking mountains. 
+                    <br><br>
+                    Beyond nature, Nepal is deeply rich in vibrant traditions, colorful festivals like Dashain and Tihar, and a unique cultural heritage where diverse communities live together in harmony. Our culture is defined by warm hospitality, where guests are treated with utmost respect ("Atithi Devo Bhava"). 
+                    <br><br>
+                    Moving from Nepal to South Korea for my studies has been an inspiring journey—allowing me to bridge two wonderful cultures, expand my technical knowledge, and work toward a bright future.
                 </p>
             </div>
         </div>
@@ -139,7 +191,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>Designed with 💙 by <span>Jaya Laxmi Dotel</span></p>
+        <p class="footer-signature">Designed by Jaya Laxmi Dotel 💙</p>
         <p>Learning today, building tomorrow.</p>
         <a href="#home">Back to Top ↑</a>
     </footer>
