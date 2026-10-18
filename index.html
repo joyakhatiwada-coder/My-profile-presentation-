@@ -20,7 +20,7 @@
             transform: scale(1.03);
         }
 
-        /* Technical Skills Card Styling (Single, Clean, White Bold Headings & Spacing) */
+        /* Technical Skills Card Styling */
         .card img {
             width: 50px;
             height: 50px;
@@ -36,25 +36,95 @@
             margin-bottom: 10px;
         }
 
-        /* Balanced, soft green background for Top 3 Goals cards & White Headings */
+        /* Balanced, soft green background for Top 3 Goals cards */
         .goals-container .card {
-            background-color: #e6f4ea;
-            border: 1px solid #ceead6;
+            background-color: #111827; /* 다크 테마 배경으로 통일하여 세련되게 변경 */
+            border: 1px solid #1f2937;
+            color: #d1d5db;
         }
 
+        /* Top 3 Goals 카드 내부의 제목 색상을 하얗게 설정 */
         .goals-container .card h3 {
-            color: #ffffff;
+            color: #ffffff !important;
         }
 
-        /* Adjust Homeland card width and padding */
+        /* Homeland Section Layout (Text Left, Image Right) */
         .homeland-container {
             display: flex;
             justify-content: center;
         }
 
         .homeland-card {
-            max-width: 750px;
+            max-width: 1020px;
             width: 100%;
+            padding: 40px;
+        }
+
+        .homeland-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 45px;
+        }
+
+        /* 텍스트 스타일 (왼쪽) */
+        .homeland-text {
+            flex: 1.4;
+        }
+
+        .homeland-text h3 {
+            font-size: 1.65rem !important;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 15px !important;
+            letter-spacing: 0.5px;
+        }
+
+        .homeland-text p {
+            font-size: 1.06rem;
+            margin-bottom: 15px;
+            line-height: 1.85;
+            text-align: justify;
+            letter-spacing: 0.3px;
+        }
+
+        .homeland-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 이미지 스타일 (오른쪽) */
+        .homeland-img-container {
+            flex: 1;
+            max-width: 380px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .homeland-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .homeland-img-container img:hover {
+            transform: scale(1.03);
+        }
+
+        /* 화면이 작아질 때(모바일) 위아래로 쌓이도록 반응형 설정 */
+        @media (max-width: 768px) {
+            .homeland-content {
+                flex-direction: column-reverse;
+                gap: 25px;
+            }
+            .homeland-card {
+                padding: 25px;
+            }
+            .homeland-text p {
+                font-size: 1rem;
+            }
         }
 
         /* Footer Bold White Designer Signature Styling */
@@ -138,7 +208,7 @@
         </div>
 
         <div class="container goals-container">
-            <div class="card" style="background-color: #111827; color: #d1d5db;">
+            <div class="card">
                 <div class="icon">💻</div>
                 <h3>Master Front-End Development</h3>
                 <p>
@@ -147,7 +217,7 @@
                 </p>
             </div>
 
-            <div class="card" style="background-color: #111827; color: #d1d5db;">
+            <div class="card">
                 <div class="icon">🚀</div>
                 <h3>Excel in Computer Engineering</h3>
                 <p>
@@ -156,7 +226,7 @@
                 </p>
             </div>
 
-            <div class="card" style="background-color: #111827; color: #d1d5db;">
+            <div class="card">
                 <div class="icon">🌏</div>
                 <h3>Grow as a Global Tech Professional</h3>
                 <p>
@@ -176,15 +246,34 @@
         </div>
 
         <div class="container homeland-container">
-            <div class="card homeland-card">
-                <h3 style="color: white; font-size: 1.35rem; font-weight: 700; margin-bottom: 10px;">Proudly from Nepal</h3>
-                <p style="margin: 0;">
-                    I come from Nepal, a country nestled in the majestic Himalayas and famously known as the birthplace of Lord Buddha and home to Mount Everest. Nepal is a land of incredible natural beauty, peaceful landscapes, and breathtaking mountains. 
-                    <br><br>
-                    Beyond nature, Nepal is deeply rich in vibrant traditions, colorful festivals like Dashain and Tihar, and a unique cultural heritage where diverse communities live together in harmony. Our culture is defined by warm hospitality, where guests are treated with utmost respect ("Atithi Devo Bhava"). 
-                    <br><br>
-                    Moving from Nepal to South Korea for my studies has been an inspiring journey—allowing me to bridge two wonderful cultures, expand my technical knowledge, and work toward a bright future.
-                </p>
+            <div class="card homeland-card" style="background-color: #111827; color: #d1d5db;">
+                <div class="homeland-content">
+                    <!-- 왼쪽 텍스트 영역 -->
+                    <div class="homeland-text">
+                        <h3>Proudly from Nepal</h3>
+                        
+                        <p>
+                            I come from Nepal, a country nestled in the majestic Himalayas and famously known as the birthplace of Lord Buddha and home to Mount Everest. Nepal is a land of incredible natural beauty, peaceful landscapes, and breathtaking mountains.
+                        </p>
+                        
+                        <p>
+                            Beyond nature, Nepal is deeply rich in vibrant traditions, colorful festivals like Dashain and Tihar, and a unique cultural heritage where diverse communities live together in harmony with warm hospitality.
+                        </p>
+                        
+                        <p>
+                            Moving from Nepal to South Korea for my studies has been an inspiring journey, allowing me to connect two wonderful cultures, learn new skills, and work toward a bright future.
+                        </p>
+                        
+                        <p>
+                            Today, I am happy to build my computer skills and share the beauty of my homeland through this portfolio website as I step forward on my path.
+                        </p>
+                    </div>
+
+                    <!-- 오른쪽 이미지 영역 -->
+                    <div class="homeland-img-container">
+                        <img src="nepal.jpg" alt="Beauti of NEPAL">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
